@@ -1,0 +1,56 @@
+import telebot
+
+TOKEN = '905290337:AAFDmwj3ahMpAdeC-sKULb7uJClIhD1RpXE'
+bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(commands = ['start','go'])
+
+def start_handler(message):
+	bot.send_message(message.chat.id, 'Я готов.')
+
+
+@bot.message_handler(commands = ['help','hw','I','II','III','IV','V','rp','day','ln'])	
+
+def command_handler(message):
+	command = message.text
+	chat_id = message.chat.id
+	if command == '/help':  bot.send_message(chat_id, "Команды: /help, /hw, /start,/go, Привет, Я тебя люблю, Дай фото, Дай видео, Курбан гений")
+		
+	
+	elif command == '/hw':	bot.send_message(chat_id, "(/day)По дням.\n(/ln)По предметам.(бета)")
+		
+	
+	elif command == '/day':	bot.send_message(chat_id, "(/I)Понедельник.\n(/II)Вторник.\n(/III)Среда.\n(/IV)Четверг.\n(/V)Пятница")
+		
+	else:
+		bot.send_message(chat_id,"Этой команды не существует")
+		
+
+
+@bot.message_handler(content_types = ['text','photo'])
+
+def text_handler(message):
+	text = message.text.lower()
+	chat_id = message.chat.id
+
+	
+	if text == 'привет':
+		bot.send_message(chat_id, "Привет, я бот Homework, Мой создатель гений, и скоро благодаря мне тебе не придется искать домашку у других, или ждать их ответа всё будет тут")		
+	
+
+	
+	elif text == 'курбан гений':
+		bot.reply_to(message, "Согласен он гений")	
+	
+
+	elif text == 'фото':
+		bot.reply_to(message, 'https://imbt.ga/ihoelHUmtl')
+
+
+			
+
+	else:
+		bot.send_message(chat_id, "Я тебя не понимаю напиши /help")
+
+
+bot.polling(none_stop = True, interval = 0)	
