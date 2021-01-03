@@ -1,6 +1,6 @@
 import telebot
 
-TOKEN = '905290337:AAFDmwj3ahMpAdeC-sKULb7uJClIhD1RpXE'
+TOKEN = 'yoken'
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands = ['start','go'])
@@ -44,7 +44,7 @@ def text_handler(message):
 	
 
 	elif text == 'фото':
-		bot.reply_to(message, 'https://imbt.ga/ihoelHUmtl')
+		bot.reply_to(message, 'some')
 
 
 			
