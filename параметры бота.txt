@@ -1,8 +1,1 @@
-% Код:905290337:AAEiuIQpU4zKG4iqup7c7OejCCjHIJP51xc
-% Бот для ссылки на изоброжение:@HostImgBot
-%	elif message.text == 'дай видео':
-			bot.send_message(message.from_user.id, "https://www.youtube.com/watch?v=HgzGwKwLmgM") #для видео
-			
-% Ссылка для cmd: E:\telebotpy\telegram_bot.py
-% КАК ПРАВИЛЬНО ВЫХОДИТЬ ИЗ БОТА
-	С НАЧАЛА ЗАБЛОЧИТЬ ПОТОМ ОТКЛЮЧИТЬ СМД
+
